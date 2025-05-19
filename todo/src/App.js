@@ -19,12 +19,12 @@ count: `text-center p-2`
 function App() {
   const [todos, setTodos] = useState
   ([]);
-  const [input,setInput] = useState('')
+  const [input,setInput] = useState('');
 
 
   //create todo
   const createTodo = async (e) => {
-    e.preventDefault(e)
+    e.preventDefault()
     if(input === '') {
       alert('please enter a valid todo')
     return
@@ -33,7 +33,7 @@ function App() {
       text:input,
       completed:false
     })
-    setInput('')
+    setInput('');
   }
   //read todo in firebase
 useEffect(() => {
